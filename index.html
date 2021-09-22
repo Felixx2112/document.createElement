@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+        1. document.createElement()
+        2. document.body.appendChild()
+        3. console.dir()
+        4. innerText, id, className, style
+     -->
+    <script>
+      const h1 = document.createElement("h1");
+
+      h1.innerText = "Hello";
+
+      //  them id vao element
+      h1.id = "heading";
+
+      //them class vao element
+      // dung className vi neu su dung class thi se trung class trong es6
+      h1.className = "test";
+
+      //them style vao element
+
+      //   h1.style = "color: red; font-size: 20px; font-weight: bold";
+
+      // co the object.assign de assign nhung property
+
+      Object.assign(h1.style, {
+        color: "green",
+        fontSize: "20px",
+        fontWeight: "bold",
+        backgroundColor: "yellow",
+        textAlign: "center",
+      });
+
+      const body = document.querySelector("body");
+
+      document.body.appendChild(h1);
+
+      console.log(h1);
+    </script>
+  </body>
+</html>
